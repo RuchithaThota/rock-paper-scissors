@@ -11,7 +11,7 @@
     display: none;
     grid-template-columns: 1fr auto 1fr;
     grid-template-areas: "playerBoard resultBox houseBoard";
-    @include for-size(600px) {
+    @include for-size(tablet) {
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "playerBoard houseBoard" "resultBox resultBox";
     }

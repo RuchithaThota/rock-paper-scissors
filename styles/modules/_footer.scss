@@ -13,7 +13,7 @@
   padding: 1% 4%;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  @include for-size(600px) {
+  @include for-size(tablet) {
     font-size: $font-size-small;
     padding: 0.6rem 2rem;
   }
@@ -25,7 +25,7 @@
 }
 .btn-reset {
   margin-right: 4%;
-  @include for-size(600px) {
+  @include for-size(tablet) {
     margin-right: 0;
     margin-bottom: 4%;
   }

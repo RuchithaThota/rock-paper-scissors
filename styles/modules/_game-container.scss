@@ -8,11 +8,11 @@
     position: center;
     size: 40%;
   }
-  @include for-size(600px) {
+  @include for-size(tablet) {
     background-size: 50%;
     height: 20rem;
   }
-  @include for-size(400px) {
+  @include for-size(xphone) {
     background-size: 60%;
   }
 }

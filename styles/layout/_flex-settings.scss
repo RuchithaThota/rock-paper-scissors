@@ -6,7 +6,7 @@
   }
   @if ($element== "site-footer") {
     justify-content: flex-end;
-    @include for-size(600px) {
+    @include for-size(tablet) {
       justify-content: center;
       align-items: center;
       flex-direction: column;

@@ -1,9 +1,22 @@
 @mixin for-size($size) {
-  @media screen and (max-width: 420px) {
-    @content;
+  @if ($element==tablet) {
+    @media screen and (max-width: tablet) {
+      @content;
+    }
+  }
+  @if ($element==xxphone) {
+    @media screen and (max-width: 420px) {
+      @content;
+    }
+  }
+  @if ($element==xphone) {
+    @media screen and (max-width: 400px) {
+      @content;
+    }
+  }
+  @if ($element==phone) {
+    @media screen and (max-width: 375px) {
+      @content;
+    }
   }
 }
-//420 in header
-//600 400 in game-container
-//600 375 in game-icons
-//600 in result-conatiner

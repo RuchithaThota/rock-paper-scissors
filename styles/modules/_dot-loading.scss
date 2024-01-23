@@ -8,20 +8,15 @@
   background-color: $dark-text;
   transform: scale(1.15);
   animation: scaleAnimation 1.5s infinite alternate;
-}
-@media screen and (max-width: 600px) {
-  .dot-loading {
+  @include for-size(tablet) {
     width: 8rem;
     height: 8rem;
   }
-}
-@media screen and (max-width: 375px) {
-  .dot-loading {
+  @include font-size(phone) {
     width: 7rem;
     height: 7rem;
   }
 }
-
 @keyframes scaleAnimation {
   0% {
     transform: scale(1.15);

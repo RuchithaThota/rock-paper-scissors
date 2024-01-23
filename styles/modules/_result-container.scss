@@ -9,7 +9,7 @@
     font-size: $font-size-xnormal;
     text-align: center;
     margin-bottom: 2rem;
-    @include for-size(600px) {
+    @include for-size(tablet) {
       font-size: $font-size-normal;
     }
   }

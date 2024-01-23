@@ -5,15 +5,11 @@
   height: 10rem;
   display: grid;
   place-items: center;
-}
-@media screen and (max-width: 600px) {
-  .icon-wrapper {
+  @include for-size(tablet) {
     width: 8rem;
     height: 8rem;
   }
-}
-@media screen and (max-width: 375px) {
-  .icon-wrapper {
+  @include font-size(phone) {
     width: 7rem;
     height: 7rem;
   }
