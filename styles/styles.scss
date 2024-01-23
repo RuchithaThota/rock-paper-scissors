@@ -221,3 +221,39 @@ body {
     font-size: 1rem;
   }
 }
+.site-footer {
+  width: 90%;
+  margin: 2rem auto 0 auto;
+  //   border: 1px solid red;
+  display: flex;
+  justify-content: flex-end;
+}
+.site-footer button {
+  background-color: transparent;
+  padding: 1% 4%;
+  border: 2px solid $outline;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: $light-text;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+.btn-reset {
+  margin-right: 4%;
+}
+@media screen and (max-width: 600px) {
+  .site-footer {
+    margin: 1rem auto 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .site-footer button {
+    font-size: 0.8rem;
+  }
+  .btn-reset {
+    margin-right: 0;
+    margin-bottom: 4%;
+  }
+}
