@@ -1,0 +1,36 @@
+.game-container {
+  @include grid-settings(game-container);
+  height: 23rem;
+  margin-top: 2rem;
+  background: {
+    image: url("/images/bg-triangle.svg");
+    repeat: no-repeat;
+    position: center;
+    size: 40%;
+  }
+  @include for-size(600px) {
+    background-size: 50%;
+    height: 20rem;
+  }
+  @include for-size(400px) {
+    background-size: 60%;
+  }
+}
+.btn-action {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.btn-action:hover {
+  transform: scale(1.15);
+}
+.rock-action {
+  grid-area: rock;
+}
+.paper-action {
+  grid-area: paper;
+}
+.scissors-action {
+  grid-area: scissors;
+}

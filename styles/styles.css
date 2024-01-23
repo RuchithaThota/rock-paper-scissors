@@ -14,20 +14,61 @@ body {
   text-transform: uppercase;
 }
 
-.site-container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding-top: 2rem;
+button,
+p {
+  text-transform: uppercase;
+}
+
+.icon-wrapper {
+  background: #fff;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .icon-wrapper {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .icon-wrapper {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+.rock-icon {
+  border: 12px solid hsl(349, 71%, 52%);
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px hsla(349, 70%, 56%, 0.7);
+}
+
+.paper-icon {
+  border: 12px solid hsl(230, 89%, 62%);
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px hsla(230, 89%, 65%, 0.7);
+}
+
+.scissors-icon {
+  border: 12px solid hsl(39, 89%, 49%);
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px hsla(40, 84%, 53%, 0.7);
 }
 
 .site-header {
-  border: 2px solid hsl(217, 16%, 45%);
-  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 12px;
   height: 150px;
+  padding: 1rem 2rem;
+}
+@media screen and (max-width: 420px) {
+  .site-header {
+    padding: 1rem;
+    height: 120px;
+  }
 }
 
 .site-header img {
@@ -35,34 +76,27 @@ body {
 }
 
 .scorebox {
-  width: 150px;
-  height: 100%;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 1rem 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 150px;
+  height: 100%;
+  padding: 1rem 1.4rem;
+  background-color: #fff;
+  border-radius: 8px;
   line-height: 1;
 }
-
 .scorebox--label {
   font-size: 1rem;
   color: hsl(229, 64%, 46%);
   letter-spacing: 0.1rem;
 }
-
 .scorebox--number {
   color: hsl(229, 25%, 31%);
   font-size: 4rem;
 }
-
 @media screen and (max-width: 420px) {
-  .site-header {
-    padding: 1rem;
-    height: 120px;
-  }
   .scorebox {
     width: 120px;
     padding: 0.8rem 1rem;
@@ -71,6 +105,7 @@ body {
     font-size: 3rem;
   }
 }
+
 .game-container {
   display: grid;
   place-items: center;
@@ -83,21 +118,19 @@ body {
   background-position: center;
   background-size: 40%;
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 420px) {
   .game-container {
     background-size: 50%;
     height: 20rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .game-container {
     background-size: 60%;
   }
 }
-.btn-action,
-.player-selection,
-.house-selection {
+
+.btn-action {
   outline: none;
   border: none;
   background: none;
@@ -120,7 +153,6 @@ body {
   grid-area: scissors;
 }
 
-.icon-wrapper,
 .dot-loading {
   background: #fff;
   border-radius: 50%;
@@ -128,28 +160,23 @@ body {
   height: 10rem;
   display: grid;
   place-items: center;
+  background-color: hsl(229, 25%, 31%);
+  transform: scale(1.15);
+  animation: scaleAnimation 1.5s infinite alternate;
 }
 
 @media screen and (max-width: 600px) {
-  .icon-wrapper,
   .dot-loading {
     width: 8rem;
     height: 8rem;
   }
 }
 @media screen and (max-width: 375px) {
-  .icon-wrapper,
   .dot-loading {
     width: 7rem;
     height: 7rem;
   }
 }
-.dot-loading {
-  background-color: hsl(229, 25%, 31%);
-  transform: scale(1.15);
-  animation: scaleAnimation 1.5s infinite alternate;
-}
-
 @keyframes scaleAnimation {
   0% {
     transform: scale(1.15);
@@ -161,43 +188,20 @@ body {
     transform: scale(1.15);
   }
 }
-.rock-icon {
-  border: 12px solid hsl(349, 71%, 52%);
-  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px hsla(349, 70%, 56%, 0.7);
-}
-
-.paper-icon {
-  border: 12px solid hsl(230, 89%, 62%);
-  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px hsla(230, 89%, 65%, 0.7);
-}
-
-.scissors-icon {
-  border: 12px solid hsl(39, 89%, 49%);
-  box-shadow: inset 0 6px rgba(0, 0, 0, 0.2), 0 6px hsla(40, 84%, 53%, 0.7);
-}
-
 .result-container {
   display: grid;
-  display: none;
   place-items: center;
+  display: none;
   grid-template-columns: 1fr auto 1fr;
   grid-template-areas: "playerBoard resultBox houseBoard";
   margin-top: 2rem;
   height: 20rem;
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 420px) {
   .result-container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "playerBoard houseBoard" "resultBox resultBox";
   }
-}
-.resultbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  grid-area: resultBox;
 }
 
 .result-board {
@@ -205,6 +209,24 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.result-board--label {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 420px) {
+  .result-board--label {
+    font-size: 1rem;
+  }
+}
+
+.player-selection,
+.house-selection {
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .player-board {
@@ -215,6 +237,13 @@ body {
   grid-area: houseBoard;
 }
 
+.resultbox {
+  grid-area: resultBox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .resultbox--result {
   font-size: 2rem;
   font-weight: 700;
@@ -234,35 +263,36 @@ body {
   cursor: pointer;
 }
 
-.result-board--label {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-@media screen and (max-width: 600px) {
-  .result-board--label {
-    font-size: 1rem;
-  }
-}
 .site-footer {
-  width: 90%;
-  margin: 0 auto;
   display: flex;
   justify-content: flex-end;
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 420px) {
+  .site-footer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .site-footer button {
-  background-color: transparent;
-  padding: 1% 4%;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 8px;
+  background-color: transparent;
   font-size: 1rem;
   color: #fff;
-  text-transform: uppercase;
   letter-spacing: 0.2rem;
-  cursor: pointer;
+  padding: 1% 4%;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+@media screen and (max-width: 420px) {
+  .site-footer button {
+    font-size: 0.8rem;
+    padding: 0.6rem 2rem;
+  }
 }
 
 .site-footer button:hover {
@@ -274,20 +304,15 @@ body {
 .btn-reset {
   margin-right: 4%;
 }
-
-@media screen and (max-width: 600px) {
-  .site-footer {
-    margin: 1rem auto 0 auto;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .site-footer button {
-    font-size: 0.8rem;
-    padding: 0.6rem 2rem;
-  }
+@media screen and (max-width: 420px) {
   .btn-reset {
     margin-right: 0;
     margin-bottom: 4%;
   }
+}
+
+.site-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 2rem;
 }/*# sourceMappingURL=styles.css.map */

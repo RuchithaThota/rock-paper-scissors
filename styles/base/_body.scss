@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(at top, $bg-grad-1, $bg-grad-2);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: $light-text;
+  font-family: $font-family;
+  text-transform: uppercase;
+}
+button,
+p {
+  text-transform: uppercase;
+}

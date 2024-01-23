@@ -1,0 +1,32 @@
+.site-footer {
+  @include flex-settings(site-footer);
+  width: 90%;
+  margin: 0 auto;
+}
+.site-footer button {
+  border: 2px solid $outline;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: $font-size-normal;
+  color: $light-text;
+  letter-spacing: 0.2rem;
+  padding: 1% 4%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  @include for-size(600px) {
+    font-size: $font-size-small;
+    padding: 0.6rem 2rem;
+  }
+}
+.site-footer button:hover {
+  background-color: $light-text;
+  color: $score-text;
+  box-shadow: 0 0 10px $light-text;
+}
+.btn-reset {
+  margin-right: 4%;
+  @include for-size(600px) {
+    margin-right: 0;
+    margin-bottom: 4%;
+  }
+}

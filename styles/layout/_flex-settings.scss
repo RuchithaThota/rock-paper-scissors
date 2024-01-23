@@ -1,0 +1,22 @@
+@mixin flex-settings($element) {
+  display: flex;
+  @if ($element== "site-header") {
+    justify-content: space-between;
+    align-items: center;
+  }
+  @if ($element== "site-footer") {
+    justify-content: flex-end;
+    @include for-size(600px) {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  @if (
+    $element== "scorebox" or $element== "result-board" or $element== "resultbox"
+  ) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

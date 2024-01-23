@@ -1,0 +1,35 @@
+.dot-loading {
+  background: $light-text;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: grid;
+  place-items: center;
+  background-color: $dark-text;
+  transform: scale(1.15);
+  animation: scaleAnimation 1.5s infinite alternate;
+}
+@media screen and (max-width: 600px) {
+  .dot-loading {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dot-loading {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}

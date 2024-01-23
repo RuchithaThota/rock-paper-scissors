@@ -1,0 +1,9 @@
+@mixin for-size($size) {
+  @media screen and (max-width: 420px) {
+    @content;
+  }
+}
+//420 in header
+//600 400 in game-container
+//600 375 in game-icons
+//600 in result-conatiner

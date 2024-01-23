@@ -1,0 +1,32 @@
+.icon-wrapper {
+  background: $light-text;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: grid;
+  place-items: center;
+}
+@media screen and (max-width: 600px) {
+  .icon-wrapper {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .icon-wrapper {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+.rock-icon {
+  border: 12px solid $rock-1;
+  box-shadow: inset 0 6px $btn-shadow-inset, 0 6px $rock-2;
+}
+.paper-icon {
+  border: 12px solid $paper-1;
+  box-shadow: inset 0 6px $btn-shadow-inset, 0 6px $paper-2;
+}
+.scissors-icon {
+  border: 12px solid $scissors-1;
+  box-shadow: inset 0 6px $btn-shadow-inset, 0 6px $scissors-2;
+}

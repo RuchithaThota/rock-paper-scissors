@@ -1,0 +1,19 @@
+@mixin grid-settings($element) {
+  display: grid;
+  place-items: center;
+  @if ($element== "game-container") {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "paper scissors"
+      "rock rock";
+  }
+  @if ($element== "result-container") {
+    display: none;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "playerBoard resultBox houseBoard";
+    @include for-size(600px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "playerBoard houseBoard" "resultBox resultBox";
+    }
+  }
+}
