@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+$outline: hsl(217, 16%, 45%);
+$light-text: #fff;
+$dark-text: hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$bg-grad-1: hsl(214, 47%, 23%);
+$bg-grad-2: hsl(237, 49%, 15%);
+$rock-1: hsl(349, 71%, 52%);
+$rock-2: hsl(349, 70%, 56%);
+$paper-1: hsl(230, 89%, 62%);
+$paper-2: hsl(230, 89%, 65%);
+$scissors-1: hsl(39, 89%, 49%);
+$scissors-2: hsl(40, 84%, 53%);
+
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+$font-family: "Barlow Semi Condensed", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(at top, $bg-grad-1, $bg-grad-2);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: $light-text;
+  font-family: $font-family;
+  text-transform: uppercase;
+}
+.site-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  //   border: 1px solid red;
+}
+.site-header {
+  border: 2px solid $outline;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 150px;
+}
+.site-header img {
+  height: 100%;
+}
+.scorebox {
+  width: 150px;
+  height: 100%;
+  background-color: $light-text;
+  border-radius: 8px;
+  padding: 1rem 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+}
+.scorebox--label {
+  font-size: 1rem;
+  color: $score-text;
+  letter-spacing: 0.1rem;
+}
+.scorebox--number {
+  color: $dark-text;
+  font-size: 4rem;
+}
