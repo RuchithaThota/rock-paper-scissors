@@ -110,7 +110,9 @@ body {
     background-size: 60%;
   }
 }
-.btn-action {
+.btn-action,
+.player-selection,
+.house-selection {
   outline: none;
   border: none;
   background: none;
@@ -128,7 +130,8 @@ body {
 .scissors-action {
   grid-area: scissors;
 }
-.icon-wrapper {
+.icon-wrapper,
+.dot-loading {
   background: $light-text;
   border-radius: 50%;
   width: 10rem;
@@ -137,17 +140,37 @@ body {
   place-items: center;
 }
 @media screen and (max-width: 600px) {
-  .icon-wrapper {
+  .icon-wrapper,
+  .dot-loading {
     width: 8rem;
     height: 8rem;
   }
 }
 @media screen and (max-width: 375px) {
-  .icon-wrapper {
+  .icon-wrapper,
+  .dot-loading {
     width: 7rem;
     height: 7rem;
   }
 }
+.dot-loading {
+  background-color: $dark-text;
+  transform: scale(1.15);
+  animation: scaleAnimation 1.5s infinite alternate;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
 .rock-icon {
   border: 12px solid $rock-1;
   box-shadow: inset 0 6px $btn-shadow-inset, 0 6px $rock-2;
@@ -224,7 +247,6 @@ body {
 .site-footer {
   width: 90%;
   margin: 2rem auto 0 auto;
-  //   border: 1px solid red;
   display: flex;
   justify-content: flex-end;
 }
@@ -232,12 +254,18 @@ body {
   background-color: transparent;
   padding: 1% 4%;
   border: 2px solid $outline;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 1rem;
   color: $light-text;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.site-footer button:hover {
+  background-color: $light-text;
+  color: $score-text;
+  box-shadow: 0 0 10px $light-text;
 }
 .btn-reset {
   margin-right: 4%;
