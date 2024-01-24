@@ -12,6 +12,11 @@
       flex-direction: column;
     }
   }
+  @if ($element== "rules-modal") {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
   @if (
     $element== "scorebox" or $element== "result-board" or $element== "resultbox"
   ) {

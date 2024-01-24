@@ -12,7 +12,7 @@
     width: 8rem;
     height: 8rem;
   }
-  @include font-size(phone) {
+  @include for-size(phone) {
     width: 7rem;
     height: 7rem;
   }

@@ -1,4 +1,4 @@
-@mixin for-size($size) {
+@mixin for-size($element) {
   @if ($element==tablet) {
     @media screen and (max-width: tablet) {
       @content;

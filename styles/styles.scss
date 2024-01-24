@@ -13,9 +13,10 @@
 @import "modules/_dot-loading";
 @import "modules/result-container";
 @import "modules/footer";
-
+@import "modules/rules-modal";
 //site-container
 .site-container {
+  position: relative;
   max-width: 700px;
   margin: 0 auto;
   padding-top: 2rem;
