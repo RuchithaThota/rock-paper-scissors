@@ -282,14 +282,6 @@ p {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 400px) {
-  .site-footer {
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: translate(50%, -10%);
-  }
-}
 
 .site-footer button {
   border: 2px solid hsl(217, 16%, 45%);
