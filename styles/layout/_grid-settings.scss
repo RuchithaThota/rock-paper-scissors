@@ -2,14 +2,13 @@
   display: grid;
   place-items: center;
   @if ($element== "game-container") {
-    display: none;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "paper scissors"
       "rock rock";
   }
   @if ($element== "result-container") {
-    // display: none;
+    display: none;
     grid-template-columns: 1fr auto 1fr;
     grid-template-areas: "playerBoard resultBox houseBoard";
     @include for-size(tablet) {
