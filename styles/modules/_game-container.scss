@@ -15,6 +15,9 @@
   @include for-size(xphone) {
     background-size: 60%;
   }
+  @include for-size(xxphone) {
+    margin-top: 0rem;
+  }
 }
 .btn-action {
   outline: none;

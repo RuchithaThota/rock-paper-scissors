@@ -129,6 +129,11 @@ p {
     background-size: 60%;
   }
 }
+@media screen and (max-width: 420px) {
+  .game-container {
+    margin-top: 0rem;
+  }
+}
 
 .btn-action {
   outline: none;
@@ -385,4 +390,9 @@ p {
   max-width: 700px;
   margin: 0 auto;
   padding-top: 2rem;
+}
+@media screen and (max-width: 420px) {
+  .site-container {
+    padding-top: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
