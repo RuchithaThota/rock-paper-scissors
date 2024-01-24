@@ -110,6 +110,7 @@ p {
 .game-container {
   display: grid;
   place-items: center;
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "paper scissors" "rock rock";
   height: 23rem;
@@ -197,7 +198,6 @@ p {
 .result-container {
   display: grid;
   place-items: center;
-  display: none;
   grid-template-columns: 1fr auto 1fr;
   grid-template-areas: "playerBoard resultBox houseBoard";
   margin-top: 2rem;
