@@ -30,6 +30,9 @@
 .resultbox {
   grid-area: resultBox;
   @include flex-settings(resultbox);
+  @include for-size(xxphone) {
+    margin-bottom: 1.2rem;
+  }
   &--result {
     font-size: $font-size-medium;
     font-weight: $font-weight-bolder;

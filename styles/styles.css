@@ -250,6 +250,11 @@ p {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 420px) {
+  .resultbox {
+    margin-bottom: 1.2rem;
+  }
+}
 .resultbox--result {
   font-size: 2rem;
   font-weight: 700;
