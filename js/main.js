@@ -12,9 +12,20 @@ const dotLoading = document.querySelector('.dot-loading');
 const resetBtn = document.querySelector('.btn-reset');
 const playAgainBtn = document.querySelector('.btn-play-again');
 
+
 //scoreNumber & gameResult
 const score = document.querySelector('.scorebox--number');
 const result = document.querySelector('.resultbox--result');
+
+// toggleResetBtn
+resetBtn.style.display = 'none';
+function toggleResetBtn() {
+    const scoreNumber = parseInt(score.textContent)
+    console.log(resultContainer.style.display === 'grid');
+    if (resultContainer.style.display === 'grid' && scoreNumber !== 0) {
+        resetBtn.style.display = "block";
+    }
+}
 
 //gameContainer
 gameContainer.addEventListener('click', handleGameEvent)
@@ -29,19 +40,20 @@ function handleGameEvent(event) {
         <img src="/images/icon-${playerIcon}.svg" alt="${playerIcon}">
         </div>`
     setTimeout(() => {
-        handleGameTimeout(playerIcon)
+        handleGameTimeout(playerIcon);
+        toggleResetBtn();
     }, 5000)
 }
 
 // handleGameTimeout
 function handleGameTimeout(playerIcon) {
     dotLoading.style.display = 'none';
+    resultBox.style.display = 'flex';
     const houseIcon = getHouseSelection();
     houseSelection.innerHTML = `<div class="icon-wrapper  ${houseIcon}-icon">
         <img src="/images/icon-${houseIcon}.svg" alt="${houseIcon}">
     </div>`;
     setGameScoreAndResult(playerIcon, houseIcon);
-    resultBox.style.display = 'flex';
 }
 
 // getHouseSelection
