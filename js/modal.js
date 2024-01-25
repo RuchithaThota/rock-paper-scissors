@@ -1,11 +1,11 @@
 const rulesBtn = document.querySelector('.btn-rules');
 const closeModal = document.getElementById('close-modal');
 const rulesModal = document.querySelector('.rules-modal-overlay');
-
+//events
 rulesBtn.addEventListener('click', handleRulesBtn);
 closeModal.addEventListener('click', handleRulesBtn);
 rulesModal.addEventListener('click', handleRulesBtn);
-
+// handleRulesBtn
 function handleRulesBtn(event) {
     const isRulesBtnClicked = event.target === rulesBtn;
     const isCloseModalClicked = event.target === closeModal;
