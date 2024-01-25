@@ -25,7 +25,8 @@ function resetGame() {
 }
 // handlePlayAgainBtn
 function handlePlayAgainBtn(event) {
-    resetBtn();
+    event.preventDefault();
+    resetGame();
 }
 /****GAME-CONTAINER****/
 gameContainer.addEventListener('click', handleGameEvent)
