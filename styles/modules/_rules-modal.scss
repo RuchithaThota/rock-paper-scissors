@@ -32,6 +32,9 @@
   }
   &--rules-img-wrapper {
     margin-top: 2rem;
+    @include for-size(xxphone) {
+      margin-top: 1rem;
+    }
     img {
       object-fit: contain;
       width: 100%;
