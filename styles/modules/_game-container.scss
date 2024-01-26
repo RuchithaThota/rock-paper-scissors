@@ -1,6 +1,6 @@
 .game-container {
   @include grid-settings(game-container);
-  height: 23rem;
+  height: 22rem;
   margin-top: 2rem;
   background: {
     image: url("/images/bg-triangle.svg");
@@ -12,11 +12,9 @@
     background-size: 50%;
     height: 20rem;
   }
-  @include for-size(xphone) {
-    background-size: 60%;
-  }
   @include for-size(xxphone) {
-    margin-top: 0rem;
+    height: 25rem;
+    background-size: 60%;
   }
 }
 .btn-action {

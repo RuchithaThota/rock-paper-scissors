@@ -20,7 +20,7 @@
   max-width: 700px;
   margin: 0 auto;
   padding-top: 2rem;
-  @include for-size(xxphone) {
+  @include for-size(tablet) {
     padding-top: 1rem;
   }
 }

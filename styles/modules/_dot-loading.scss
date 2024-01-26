@@ -1,20 +1,20 @@
 .dot-loading {
   background: $light-text;
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   display: grid;
   place-items: center;
   background-color: $dark-text;
   transform: scale(1.15);
   animation: scaleAnimation 1.5s infinite alternate;
   @include for-size(tablet) {
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
   }
   @include for-size(phone) {
-    width: 7rem;
-    height: 7rem;
+    width: 8rem;
+    height: 8rem;
   }
 }
 @keyframes scaleAnimation {

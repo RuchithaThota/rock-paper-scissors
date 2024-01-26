@@ -1,16 +1,25 @@
 .result-container {
   @include grid-settings(result-container);
-  margin-top: 2rem;
+  margin-top: 3rem;
   height: 20rem;
+  @include for-size(tablet) {
+    height: auto;
+  }
 }
 .result-board {
   @include flex-settings(result-board);
+  @include for-size(tablet) {
+    flex-direction: column-reverse;
+  }
   &--label {
     font-size: $font-size-xnormal;
     text-align: center;
-    margin-bottom: 2rem;
+    font-family: $font-family;
+    letter-spacing: 0.1rem;
+    margin-bottom: 4rem;
     @include for-size(tablet) {
       font-size: $font-size-normal;
+      margin-top: 4rem;
     }
   }
 }

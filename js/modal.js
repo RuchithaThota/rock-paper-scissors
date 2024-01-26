@@ -1,4 +1,4 @@
-const rulesBtn = document.querySelector('.btn-rules');
+const rulesBtn = document.getElementById('btn-rules');
 const closeModal = document.getElementById('close-modal');
 const rulesModal = document.querySelector('.rules-modal-overlay');
 //events

@@ -1,32 +1,33 @@
 .site-footer {
   @include flex-settings(site-footer);
   width: 90%;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
+  // @include for-size(tablet) {
+  //   margin: 1rem auto 0 auto;
+  // }
 }
 .site-footer button {
   border: 2px solid $outline;
   border-radius: 8px;
   background-color: transparent;
-  font-size: $font-size-normal;
   color: $light-text;
+  font-size: $font-size-small;
+  font-family: $font-family;
+  font-weight: $font-weight-bold;
   letter-spacing: 0.2rem;
-  padding: 1% 4%;
+  padding: 12px 36px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  @include for-size(tablet) {
-    font-size: $font-size-small;
-    padding: 0.6rem 2rem;
-  }
 }
 .site-footer button:hover {
   background-color: $light-text;
   color: $score-text;
   box-shadow: 0 0 10px $light-text;
 }
-.btn-reset {
-  margin-right: 4%;
+#btn-reset {
+  margin-right: 30px;
   @include for-size(tablet) {
     margin-right: 0;
-    margin-bottom: 4%;
+    margin-bottom: 20px;
   }
 }

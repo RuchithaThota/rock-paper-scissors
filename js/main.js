@@ -9,7 +9,7 @@ const resultBox = document.querySelector('.resultbox');
 const dotLoading = document.querySelector('.dot-loading');
 
 //Reset & playAgain
-const resetBtn = document.querySelector('.btn-reset');
+const resetBtn = document.getElementById('btn-reset');
 const playAgainBtn = document.querySelector('.btn-play-again');
 
 

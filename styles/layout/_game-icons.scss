@@ -14,6 +14,34 @@
     height: 7rem;
   }
 }
+.house-selection .icon-wrapper,
+.player-selection .icon-wrapper {
+  width: 12rem;
+  height: 12rem;
+  border-width: 24px;
+  border-style: solid;
+  @include for-size(tablet) {
+    width: 10rem;
+    height: 10rem;
+    border-width: 15px;
+  }
+  @include for-size(phone) {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+.house-selection .rock-icon,
+.player-selection .rock-icon {
+  border-color: $rock-1;
+}
+.house-selection .paper-icon,
+.player-selection .paper-icon {
+  border-color: $paper-1;
+}
+.house-selection .scissors-icon,
+.player-selection .scissors-icon {
+  border-color: $scissors-1;
+}
 .rock-icon {
   border: 12px solid $rock-1;
   box-shadow: inset 0 6px $btn-shadow-inset, 0 6px $rock-2;
