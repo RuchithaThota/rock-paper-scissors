@@ -94,6 +94,7 @@ function resetGame() {
 resetBtn.addEventListener('click', handleResetBtn);
 function handleResetBtn() {
     score.textContent = 0;
+    resetBtn.style.display = 'none'
     resetGame();
 }
 

@@ -2,9 +2,6 @@
   @include flex-settings(site-footer);
   width: 90%;
   margin: 2rem auto 0 auto;
-  // @include for-size(tablet) {
-  //   margin: 1rem auto 0 auto;
-  // }
 }
 .site-footer button {
   border: 2px solid $outline;
@@ -23,6 +20,9 @@
   background-color: $light-text;
   color: $score-text;
   box-shadow: 0 0 10px $light-text;
+  @include for-size(tablet) {
+    background-color: transparent;
+  }
 }
 #btn-reset {
   margin-right: 30px;

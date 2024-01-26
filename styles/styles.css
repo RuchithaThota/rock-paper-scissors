@@ -355,6 +355,11 @@ p {
   color: hsl(229, 64%, 46%);
   box-shadow: 0 0 10px #fff;
 }
+@media screen and (max-width: 600px) {
+  .site-footer button:hover {
+    background-color: transparent;
+  }
+}
 
 #btn-reset {
   margin-right: 30px;
